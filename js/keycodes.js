@@ -2,6 +2,7 @@ var displayAscii = document.querySelector(".display-ascii");
 var keybox = document.querySelector(".keybox");
 // displayAscii.innerText = "TEST"
 $("body").bind("keydown",function(e){
+	e.preventDefault();
     var cvalue = String.fromCharCode(e.keyCode);
     var nvalue = (e.keyCode);
     displayAscii.innerText = nvalue;
@@ -88,6 +89,12 @@ function getCharString(value){
 		case 121 : return "f10" ; done
 		case 122 : return "f11" ; done
 		case 123 : return "f12" ; done
+		case 37 : return "Left Arrow" ; done
+		case 38 : return "Up Arrow" ; done
+		case 39 : return "Right Arrow" ; done
+		case 40 : return "Down Arrow" ; done
+		case 45 : return "Insert" ; done
+
 		default: return "undefined" ; done
 		done;
 	}
