@@ -2,8 +2,15 @@
 <html>
 <head>
 	<title>Keycodes Viewer</title>
+	<script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous"></script>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	 <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet"> 
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	 <script  src="./keyboard/keypress.js"></script>
 <style type="text/css">
 .bullseye {
     position: fixed;
@@ -19,15 +26,76 @@
     border-radius: 10px;
     box-shadow: 0px 5px 15px  #888888;
     /*font-family: 'Abril Fatface', cursive;*/
-    font-size: 2em;
+    font-size: 2em;    
 }
 </style>
+
+
+
+
 </head>
 <body>
 <div class="">
-	<div class="bullseye keybox">
+	<div class="bullseye keybox text-center">
 	  Press any key to get the ASCII value
 	</div>
 </div>
 </body>
+
+<script type="text/javascript">
+$("body").bind("keydown",function(e){
+    var cvalue = String.fromCharCode(e.keyCode);
+    var nvalue = (e.keyCode);
+    // var value = this.value + String.fromCharCode(e.keyCode);
+       console.log(cvalue,nvalue);
+       console.log("getCharString",getCharString(nvalue))
+})
+
+function getCharString(value){
+	switch(value){
+		case 65 : return "a" ; done
+		case 66 : return "b" ; done
+		case 67 : return "c" ; done
+		case 68 : return "d" ; done
+		case 69 : return "e" ; done
+		case 70 : return "f" ; done
+		case 71 : return "g" ; done
+		case 72 : return "h" ; done
+		case 73 : return "i" ; done
+		case 74 : return "j" ; done
+		case 75 : return "k" ; done
+		case 76 : return "l" ; done
+		case 77 : return "m" ; done
+		case 78 : return "n" ; done
+		case 79 : return "o" ; done
+		case 80 : return "p" ; done
+		case 81 : return "q" ; done
+		case 82 : return "r" ; done
+		case 83 : return "s" ; done
+		case 84 : return "t" ; done
+		case 85 : return "u" ; done
+		case 86 : return "v" ; done
+		case 87 : return "w" ; done
+		case 88 : return "x" ; done
+		case 89 : return "y" ; done
+		case 90 : return "z" ; done
+		// case 91 : return "" ; done
+		// case 92 : return "" ; done
+		// case 93 : return "" ; done
+		done;
+	}
+}
+
+//  var listener = new window.keypress.Listener();
+//  listener.simple_combo("s", function() {
+//     console.log("You pressed s");
+// });
+//  listener.simple_combo("shift s", function() {
+//     console.log("You pressed shift s");
+// });
+//   listener.simple_combo("S", function() {
+//     console.log("You pressed S");
+// });
+</script>
+
 </html>
