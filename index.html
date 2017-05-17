@@ -47,7 +47,7 @@ $("body").bind("keydown",function(e){
     var cvalue = String.fromCharCode(e.keyCode);
     var nvalue = (e.keyCode);
     // var value = this.value + String.fromCharCode(e.keyCode);
-       console.log(cvalue,nvalue);
+       // console.log(cvalue,nvalue);
        console.log("getCharString",getCharString(nvalue))
 })
 
@@ -126,7 +126,7 @@ function getCharString(value){
 		case 121 : return "f10" ; done
 		case 122 : return "f11" ; done
 		case 123 : return "f12" ; done
-		// case 93 : return "" ; done
+		default: return "undefined" ; done
 		done;
 	}
 }
