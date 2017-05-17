@@ -1,0 +1,19 @@
+Workflow: User
+User clicks on any key on keypad
+Large text appears displaying ASCII number
+smaller text appears displaying what key was pressed.
+unrecognized keys display a error message
+
+*****************************************************
+Questions?
+How to capture any key press
+****************************************************
+workflow: program
+setup listener to capture keys
+map key to table
+ display ASCII number
+ display key pressed
+
+ if not found/error: display message
+****************************************************
+
