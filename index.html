@@ -26,7 +26,12 @@
     border-radius: 10px;
     box-shadow: 0px 5px 15px  #888888;
     /*font-family: 'Abril Fatface', cursive;*/
-    font-size: 2em;    
+    font-size: 2em;
+    /*margin: auto;    */
+}
+.display-ascii {
+font-size: 25em;
+margin-bottom: -50px;	
 }
 </style>
 
@@ -35,17 +40,23 @@
 
 </head>
 <body>
-<div class="">
-	<div class="bullseye keybox text-center">
+<div class="bullseye  text-center">
+	<div class="display-ascii"></div>
+	<div class="keybox">
 	  Press any key to get the ASCII value
 	</div>
 </div>
 </body>
 
 <script type="text/javascript">
+var displayAscii = document.querySelector(".display-ascii");
+var keybox = document.querySelector(".keybox");
+// displayAscii.innerText = "TEST"
 $("body").bind("keydown",function(e){
     var cvalue = String.fromCharCode(e.keyCode);
     var nvalue = (e.keyCode);
+    displayAscii.innerText = nvalue;
+    keybox.innerText = getCharString(nvalue);
     // var value = this.value + String.fromCharCode(e.keyCode);
        // console.log(cvalue,nvalue);
        console.log("getCharString",getCharString(nvalue))
