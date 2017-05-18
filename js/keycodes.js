@@ -1,19 +1,45 @@
 var displayAscii = document.querySelector(".display-ascii");
 var keybox = document.querySelector(".keybox");
-// displayAscii.innerText = "TEST"
+
 $("body").bind("keydown",function(e){
 	e.preventDefault();
-    var cvalue = String.fromCharCode(e.keyCode);
+    // var cvalue = String.fromCharCode(e.keyCode);
     var nvalue = (e.keyCode);
     displayAscii.innerText = nvalue;
     keybox.innerText = getCharString(nvalue);
-    // var value = this.value + String.fromCharCode(e.keyCode);
-       // console.log(cvalue,nvalue);
-       console.log("getCharString",getCharString(nvalue))
 })
 
 function getCharString(value){
 	switch(value){
+		case 8 : return "Backspace" ; done
+		case 9 : return "Tab" ; done
+		case 13 : return "Enter" ; done
+		case 16 : return "Shift" ; done
+		case 17 : return "Ctrl" ; done
+		case 18 : return "Alt" ; done
+		case 20 : return "Caps Lock" ; done
+		case 27 : return "Esc" ; done
+		case 32 : return "Space" ; done
+		case 33 : return "PgUp" ; done
+		case 34 : return "PgDn" ; done
+		case 35 : return "End" ; done
+		case 36 : return "Home" ; done
+		case 37 : return "Left Arrow" ; done
+		case 38 : return "Up Arrow" ; done
+		case 39 : return "Right Arrow" ; done
+		case 40 : return "Down Arrow" ; done
+		case 45 : return "Insert" ; done
+		case 46 : return "Delete" ; done
+		case 48 : return "0" ; done
+		case 49 : return "1" ; done
+		case 50 : return "2" ; done
+		case 51 : return "3" ; done
+		case 52 : return "4" ; done
+		case 53 : return "5" ; done
+		case 54 : return "6" ; done
+		case 55 : return "7" ; done
+		case 56 : return "8" ; done
+		case 57 : return "9" ; done
 		case 65 : return "a" ; done
 		case 66 : return "b" ; done
 		case 67 : return "c" ; done
@@ -40,43 +66,7 @@ function getCharString(value){
 		case 88 : return "x" ; done
 		case 89 : return "y" ; done
 		case 90 : return "z" ; done
-		case 48 : return "0" ; done
-		case 49 : return "1" ; done
-		case 50 : return "2" ; done
-		case 51 : return "3" ; done
-		case 52 : return "4" ; done
-		case 53 : return "5" ; done
-		case 54 : return "6" ; done
-		case 55 : return "7" ; done
-		case 56 : return "8" ; done
-		case 57 : return "9" ; done
-		case 27 : return "Esc" ; done
-		case 9 : return "Tab" ; done
-		case 20 : return "Caps Lock" ; done
-		case 16 : return "Shift" ; done
-		// case 93 : return "Fn" ; done
-		case 17 : return "Ctrl" ; done
 		case 91 : return "Windows Key / Left ⌘ / Chromebook Search key" ; done
-		case 18 : return "Alt" ; done
-		case 32 : return "Space" ; done
-		case 36 : return "Home" ; done
-		case 35 : return "End" ; done
-		case 33 : return "PgUp" ; done
-		case 34 : return "PgDn" ; done
-		case 186 : return "Semi-colon" ; done
-		case 222 : return "Single Quote" ; done
-		case 13 : return "Enter" ; done
-		case 188 : return "Comma" ; done
-		case 190 : return "Period" ; done
-		case 191 : return "Forward Slash" ; done
-		case 219 : return "Open Bracket" ; done
-		case 221 : return "Close Bracket" ; done
-		case 220 : return "Back Slash" ; done
-		case 189 : return "Dash" ; done
-		case 187 : return "Equals" ; done
-		case 8 : return "Backspace" ; done
-		case 46 : return "Delete" ; done
-		case 192 : return "Grave Accent / ñ / æ" ; done
 		case 112 : return "f1" ; done
 		case 113 : return "f2" ; done
 		case 114 : return "f3" ; done
@@ -89,12 +79,17 @@ function getCharString(value){
 		case 121 : return "f10" ; done
 		case 122 : return "f11" ; done
 		case 123 : return "f12" ; done
-		case 37 : return "Left Arrow" ; done
-		case 38 : return "Up Arrow" ; done
-		case 39 : return "Right Arrow" ; done
-		case 40 : return "Down Arrow" ; done
-		case 45 : return "Insert" ; done
-
+		case 186 : return "Semi-colon" ; done
+		case 187 : return "Equals" ; done
+		case 188 : return "Comma" ; done
+		case 189 : return "Dash" ; done
+		case 190 : return "Period" ; done
+		case 191 : return "Forward Slash" ; done
+		case 192 : return "Grave Accent / ñ / æ" ; done
+		case 219 : return "Open Bracket" ; done
+		case 221 : return "Close Bracket" ; done
+		case 220 : return "Back Slash" ; done
+		case 222 : return "Single Quote" ; done
 		default: return "undefined" ; done
 		done;
 	}
